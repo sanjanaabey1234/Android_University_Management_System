@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">LoginSignUp</string>
+    <string-array name="branches">
+        <item>Matara</item>
+        <item>Kandy</item>
+        <item>Negombo</item>
+        <item>Colombo</item>
+        <item>Jaffna</item>
+        <item>Kegalle</item>
+        <item>Galle</item>
+        <item>Gampaha</item>
+        <item>Piliyandala</item>
+        <item>Kottawa</item>
+    </string-array>
+
+    <string-array name="duration">
+        <item>1</item>
+        <item>3</item>
+        <item>6</item>
+        <item>12</item>
+    </string-array>
+
+
+    <string-array name="destinations_array">
+        <item>Matara</item>
+        <item>Galle</item>
+        <item>Kandy</item>
+        <item>Colombo</item>
+        <item>Negombo</item>
+        <item>Jaffna</item>
+        <item>Kegalle</item>
+        <item>Gampaha</item>
+        <item>Piliyandala</item>
+        <item>Kottawa</item>
+
+        <!-- Add more destinations as needed -->
+    </string-array>
+
+
+    <string-array name="register_array">
+        <item>Advanced National Diploma in Human Resource Management (F/T)</item>
+        <item>Advanced Certficate Course in Business Management</item>
+        <item>Advanced Certficate Course in Financial and Management Accounting</item>
+        <item>Advanced Certficate Course in Marketing Management</item>
+        <item>Advanced Certificate in Organic Agribusiness Management</item>
+        <item>Advanced Certificate Course in Human Resource Management - English Medium</item>
+        <item>Advanced Certificate in Digital Entrepreneurship</item>
+        <item>Advanced Certificate in Digital Marketing</item>
+        <item>Advanced Certificate in Event Management - (PT)</item>
+        <item>Advanced certificate in Quality Management</item>
+        <item>Advanced Certificate in Tourism and Hospitality Management</item>
+        <item>School of computing</item>
+        <item> Advanced Certificate Course in ICT</item>
+        <item>Advanced Certificate in Full Stack Web Development</item>
+        <item>Advanced Certificate in Full Stack Web Development OLD</item>
+        <item>Advanced Certificate in Linux System Administration</item>
+        <item>Advanced Certificate in Network Administration(CCNA)</item>
+        <item>Advanced Certificate in Software Development in Java (Android)</item>
+        <item>Advanced Certificate in Software Quality Assurance and Engineering for Professionals</item>
+        <item>Advanced Certificate in System Administration</item>
+        <item>Advanced Diploma in Advertising and Multimedia - (FT)</item>
+        <item>Advanced Certificate in Network Administration(CCNA)</item>
+        <item>Certificate Course in Computer Hardware</item>
+        <item>Advanced Certificate in Software Quality Assurance and Engineering for Professionals</item>
+        <item>Certificate Course In Computer Networking and Administration</item>
+        <!-- Add more destinations as needed -->
+    </string-array>
+</resources>
