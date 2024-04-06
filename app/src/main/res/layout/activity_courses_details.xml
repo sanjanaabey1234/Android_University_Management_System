@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterCourseWithPay"
+    tools:context=".CoursesDetails"
     android:background="@drawable/backgound2">
 
     <EditText
@@ -38,17 +38,17 @@
 
     <TextView
         android:id="@+id/CourseDetails"
-        android:layout_width="196dp"
-        android:layout_height="32dp"
+        android:layout_width="169dp"
+        android:layout_height="31dp"
         android:text="Course Details"
         android:textColor="@color/purple_200"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintHorizontal_bias="0.107"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.306" />
+        app:layout_constraintVertical_bias="0.297" />
 
     <TextView
         android:id="@+id/coursename"
@@ -129,20 +129,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.593" />
 
-    <TextView
-        android:id="@+id/studentdetails"
-        android:layout_width="188dp"
-        android:layout_height="33dp"
-        android:text="Student Details"
-        android:textColor="@color/purple_200"
-        android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.089"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
-
     <Button
         android:id="@+id/courseregister"
         android:layout_width="wrap_content"
@@ -170,133 +156,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.797" />
 
-    <TextView
-        android:id="@+id/profileName"
-        android:layout_width="99dp"
-        android:layout_height="26dp"
-        android:text="Name"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.073"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.107" />
-
-    <TextView
-        android:id="@+id/address"
-        android:layout_width="99dp"
-        android:layout_height="26dp"
-        android:text="Address"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.464"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.17" />
-
-    <TextView
-        android:id="@+id/profileEmail"
-        android:layout_width="99dp"
-        android:layout_height="26dp"
-        android:text="EmailAddress"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.891"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.17" />
-
     <Spinner
         android:id="@+id/spinnercourse"
         android:layout_width="204dp"
         android:layout_height="52dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintHorizontal_bias="0.077"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.388" />
-
-    <TextView
-        android:id="@+id/nic"
-        android:layout_width="99dp"
-        android:layout_height="26dp"
-        android:text="NIC"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.894"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.107" />
-
-    <Button
-        android:id="@+id/search"
-        android:layout_width="102dp"
-        android:layout_height="46dp"
-        android:text="Search"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.889"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.446" />
-
-    <TextView
-        android:id="@+id/city"
-        android:layout_width="99dp"
-        android:layout_height="26dp"
-        android:text="City"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.073"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.17" />
-
-    <TextView
-        android:id="@+id/dob"
-        android:layout_width="99dp"
-        android:layout_height="26dp"
-        android:text="DOB"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.464"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.107" />
-
-
-    <TextView
-        android:id="@+id/gender"
-        android:layout_width="99dp"
-        android:layout_height="26dp"
-        android:text="Gender"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.262"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.229" />
-
-    <TextView
-        android:id="@+id/profilePhone"
-        android:layout_width="99dp"
-        android:layout_height="26dp"
-        android:text="PhoneNo"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.229" />
+        app:layout_constraintVertical_bias="0.397" />
 
     <Spinner
         android:id="@+id/spinnerbranch"
@@ -309,5 +178,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.499" />
 
+    <Button
+        android:id="@+id/search"
+        android:layout_width="102dp"
+        android:layout_height="46dp"
+        android:text="Search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.864"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.401" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

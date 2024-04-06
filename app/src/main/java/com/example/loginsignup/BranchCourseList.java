@@ -27,6 +27,8 @@ public class BranchCourseList extends AppCompatActivity {
 
     Button loginButton;
 
+    Button course;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,11 +45,20 @@ public class BranchCourseList extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
         loginButton = findViewById(R.id.loginButton);
+        course = findViewById(R.id.course);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(BranchCourseList.this, RegisterCourseWithPay.class);
+                startActivity(intent);
+            }
+        });
+
+        course.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BranchCourseList.this, CoursesDetails.class);
                 startActivity(intent);
             }
         });

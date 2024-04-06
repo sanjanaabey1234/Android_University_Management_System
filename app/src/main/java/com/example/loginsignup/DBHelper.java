@@ -200,4 +200,24 @@ public class DBHelper extends SQLiteOpenHelper {
         return db.query(TABLE_COURSE, null, selection, selectionArgs, null, null, null);
     }
 
+    // Retrieve a single course from the database by course name and branch
+    public Course getCourse(String courseName, String selectedBranch) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String selection = COL_COURSE_NAME + " = ? AND " + COL_SELECTED_BRANCH + " = ?";
+        String[] selectionArgs = {courseName, selectedBranch};
+        Cursor cursor = db.query(TABLE_COURSE, null, selection, selectionArgs, null, null, null);
+        Course course = null;
+        if (cursor != null && cursor.moveToFirst()) {
+            course = new Course();
+            course.setCourseName(cursor.getString(cursor.getColumnIndex(COL_COURSE_NAME)));
+            course.setCourseFee(cursor.getString(cursor.getColumnIndex(COL_COURSE_FEE)));
+            course.setStartingDate(cursor.getString(cursor.getColumnIndex(COL_START_DATE)));
+            course.setRegistrationCloseDate(cursor.getString(cursor.getColumnIndex(COL_REGISTRATION_CLOSE_DATE)));
+            course.setSelectedBranch(cursor.getString(cursor.getColumnIndex(COL_SELECTED_BRANCH)));
+            course.setSelectedDuration(cursor.getString(cursor.getColumnIndex(COL_SELECTED_DURATION)));
+            cursor.close();
+        }
+        db.close();
+        return course;
+    }
 }

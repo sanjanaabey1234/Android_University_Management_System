@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -43,6 +44,11 @@ public class RegisterCourseWithPay extends AppCompatActivity {
     ImageView profileImage;
     StorageReference storageReference;
 
+    private Spinner spinnerCourse, spinnerBranch;
+    private Button search;
+    private TextView courseName, fee, branch, startingDate, duration;
+    private DBHelper dbHelper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +63,10 @@ public class RegisterCourseWithPay extends AppCompatActivity {
         dob = findViewById(R.id.dob);
         nic = findViewById(R.id.nic);
         gender = findViewById(R.id.gender);
+
+        spinnerCourse = findViewById(R.id.spinnercourse);
+        spinnerBranch = findViewById(R.id.spinnerbranch);
+        search = findViewById(R.id.search);
 
 
         fAuth = FirebaseAuth.getInstance();
@@ -100,6 +110,8 @@ public class RegisterCourseWithPay extends AppCompatActivity {
         });
 
     }
+
+
 
 }
 
