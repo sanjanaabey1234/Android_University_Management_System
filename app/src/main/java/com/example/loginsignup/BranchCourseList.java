@@ -1,5 +1,6 @@
 package com.example.loginsignup;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
@@ -24,6 +25,8 @@ public class BranchCourseList extends AppCompatActivity {
     private CourseListAdapter adapter;
     private List<Course> courseList;
 
+    Button loginButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +41,16 @@ public class BranchCourseList extends AppCompatActivity {
         adapter = new CourseListAdapter(this, courseList);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
+
+        loginButton = findViewById(R.id.loginButton);
+
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BranchCourseList.this, RegisterCourseWithPay.class);
+                startActivity(intent);
+            }
+        });
 
         // Populate the course spinner
         populateSpinnerFromDB(dbHelper.getCourseNames(), courseSpinner);
