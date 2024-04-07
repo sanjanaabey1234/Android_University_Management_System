@@ -1,4 +1,4 @@
-<!-- about_us_layout.xml -->
+<!-- lecturer_details_layout.xml -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,9 +9,9 @@
         android:id="@+id/buttonBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/back"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:background="@drawable/back"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"/>
 
@@ -20,27 +20,22 @@
         android:id="@+id/aboutUsTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="About Us"
+        android:text="Academic-Staff-Members "
         android:textSize="24sp"
         android:textStyle="bold"
         android:padding="16dp"
         android:textColor="@color/white"/>
-
     <TextView
-        android:id="@+id/aboutUsDescription"
+        android:id="@+id/SubTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
+        android:text="School Of Computing "
+        android:textSize="15sp"
+        android:textStyle="bold"
         android:padding="16dp"
-        android:textColor="@color/white"/>
+        android:textColor="@color/teal_700"/>
 
-    <Button
-        android:id="@+id/buttonNewBranches"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Branches"
-        android:layout_marginTop="16dp"
-        android:layout_gravity="center_horizontal"/>
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -52,7 +47,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Branch 1 -->
+            <!--  1 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -64,12 +59,13 @@
                     android:id="@+id/branch1Image"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/campus1" />
+                    android:src="@drawable/g1" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Colombo Branch"
+                    android:text="MS. G C WICKRAMASINGHE
+                                  Director (School of Computing)"
                     android:textSize="18sp"
                     android:paddingStart="16dp"
                     android:gravity="center_vertical"
@@ -88,12 +84,13 @@
                     android:id="@+id/branch2Image"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/campus3" />
+                    android:src="@drawable/th1" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Galle Branch"
+                    android:text="Mr. Thisara Weerasinghe
+                                  Head - Computer Science"
                     android:textSize="18sp"
                     android:paddingStart="16dp"
                     android:gravity="center_vertical"
@@ -113,12 +110,13 @@
                     android:id="@+id/branch3Image"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/campus4" />
+                    android:src="@drawable/man" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Kandy Branch"
+                    android:text="Mr. Rukshan Manchanayake
+                                  Senior Consultant/ Lecturer"
                     android:textSize="18sp"
                     android:paddingStart="16dp"
                     android:gravity="center_vertical"
@@ -126,30 +124,40 @@
             </LinearLayout>
 
             <!-- Branch 4-->
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="16dp"
-                >
+                android:padding="16dp">
 
                 <ImageView
                     android:id="@+id/branch4Image"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/campus5" />
+                    android:src="@drawable/gih" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Matara Branch"
-                    android:textSize="18sp"
-                    android:paddingStart="16dp"
                     android:gravity="center_vertical"
-                    android:textColor="@color/white"/>
+                    android:paddingStart="16dp"
+                    android:text="Eng. Gihan Weerasekara
+                                  Consultant/ Lecturer"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
             </LinearLayout>
+            <TextView
+                android:id="@+id/SubTitle2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="School Of Business "
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:padding="16dp"
+                android:textColor="@color/teal_700"/>
 
-            <!-- Branch 5 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -161,16 +169,17 @@
                     android:id="@+id/branch5Image"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/campus6" />
+                    android:src="@drawable/kol" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Negombo Branch"
-                    android:textSize="18sp"
-                    android:paddingStart="16dp"
                     android:gravity="center_vertical"
-                    android:textColor="@color/white"/>
+                    android:paddingStart="16dp"
+                    android:text="MR. R A K RANAWAKA
+                                  Director School of Business"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
             </LinearLayout>
             <!-- Branch 6 -->
             <LinearLayout
@@ -184,12 +193,13 @@
                     android:id="@+id/branch6Image"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/campus7" />
+                    android:src="@drawable/sili" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Jaffna Branch"
+                    android:text="Ms. Silojini Ameelan
+                                  Senior Management Consultant/ Lecturer"
                     android:textSize="18sp"
                     android:paddingStart="16dp"
                     android:gravity="center_vertical"
@@ -207,18 +217,19 @@
                     android:id="@+id/branch7Image"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/campus8" />
+                    android:src="@drawable/chul" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Kegalle Branch"
+                    android:text="Ms. Chulani Senarathna
+                                  Senior Consultant/ Lecturer"
                     android:textSize="18sp"
                     android:paddingStart="16dp"
                     android:gravity="center_vertical"
                     android:textColor="@color/white"/>
             </LinearLayout>
-            <!-- Branch 8 -->
+            <!-- 8 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -230,66 +241,18 @@
                     android:id="@+id/branch8Image"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/campus3" />
+                    android:src="@drawable/baratha1" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Kottawa Branch"
+                    android:text="Mr. Baratha Dewanarayana
+                                  Senior Consultant/ Lecturer"
                     android:textSize="18sp"
                     android:paddingStart="16dp"
                     android:gravity="center_vertical"
                     android:textColor="@color/white"/>
             </LinearLayout>
-            <!-- Branch 9 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="16dp"
-                >
-
-                <ImageView
-                    android:id="@+id/branch9Image"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/campus4" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=" Gampha Branch"
-                    android:textSize="18sp"
-                    android:paddingStart="16dp"
-                    android:gravity="center_vertical"
-                    android:textColor="@color/white"/>
-            </LinearLayout>
-            <!-- Branch 5 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="16dp"
-                >
-
-                <ImageView
-                    android:id="@+id/branch10Image"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/campus5" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Piliyandala Branch"
-                    android:textSize="18sp"
-                    android:paddingStart="16dp"
-                    android:gravity="center_vertical"
-                    android:textColor="@color/white"/>
-            </LinearLayout>
-
-
-
         </LinearLayout>
 
     </ScrollView>

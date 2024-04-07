@@ -13,6 +13,12 @@
         android:theme="@style/Theme.LoginSignUp"
         tools:targetApi="31">
         <activity
+            android:name=".DisplayBranchDetails"
+            android:exported="false" />
+        <activity
+            android:name=".LecturerDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".CoursesDetails"
             android:exported="false" />
         <activity

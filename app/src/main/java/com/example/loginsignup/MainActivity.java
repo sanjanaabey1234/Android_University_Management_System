@@ -11,7 +11,9 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     Button loginButton;
-    CardView clothingCard,aboutUsCard,location;
+    CardView clothingCard,aboutUsCard,location,LectureView;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         clothingCard=findViewById(R.id.clothingCard);
         aboutUsCard=findViewById(R.id.aboutUsCard);
         location =  findViewById(R.id.location);
+        LectureView = findViewById(R.id.LectureView);
 
         clothingCard.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,5 +59,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        LectureView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,LecturerDetailsActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
