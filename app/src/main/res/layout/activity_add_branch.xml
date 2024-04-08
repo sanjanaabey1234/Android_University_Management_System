@@ -1,65 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddBranchActivity"
-    android:background="@drawable/backgound2">
+    android:background="@drawable/backgound2"
+    android:padding="16dp">
 
 
-    <EditText
-        android:id="@+id/textBranchCode"
-        android:layout_width="357dp"
-        android:layout_height="65dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="21dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="471dp"
-        android:background="@color/white"
-        android:ems="10"
-        android:hint="Branch Code"
-        android:textAlignment="center" />
+    <TextView
+        android:id="@+id/textViewBranchDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Branch Operation"
+        android:textColor="@android:color/white"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
 
-    <EditText
-        android:id="@+id/textBranchName"
-        android:layout_width="357dp"
-        android:layout_height="65dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="26dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="373dp"
-        android:background="@color/white"
-        android:ems="10"
-        android:hint="Branch Name"
-        android:textAlignment="center" />
-
-    <Button
-        android:id="@+id/buttonAdd"
+    <ImageView
+        android:id="@+id/buttonBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="130dp"
-        android:layout_marginEnd="159dp"
-        android:layout_marginBottom="272dp"
-        android:text="Add Branch" />
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/back"
+        android:textColor="@android:color/white"/>
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="207dp"
-        android:layout_height="59dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="124dp"
-        android:layout_marginBottom="591dp"
-        android:text="Branches"
-        android:textAlignment="center"
-        android:textSize="25dp"
-        android:textColor="@color/teal_700"/>
+    <EditText
+        android:id="@+id/editTextBranchCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonBack"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:hint="Branch Code"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextBranchName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextBranchCode"
+        android:textColor="@color/white"
+        android:hint="Branch Name"
+        android:textColorHint="@color/white"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/buttonAddBranch"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_below="@id/editTextBranchName"
+        android:text="Add Branch"
+        android:layout_marginTop="16dp"/>
 
 </RelativeLayout>

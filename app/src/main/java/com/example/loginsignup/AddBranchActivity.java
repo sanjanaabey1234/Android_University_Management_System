@@ -1,65 +1,84 @@
 package com.example.loginsignup;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 public class AddBranchActivity extends AppCompatActivity {
 
-    Button addBranch;
-    EditText textBranchCode, textBranchName;
-
-    DBHelper dbHelper;
+    private EditText editTextBranchCode;
+    private EditText editTextBranchName;
+    private Button buttonAddBranch;
+    private ImageView buttonBack;
+    private DBHelperBranch dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_branch);
 
-        addBranch = findViewById(R.id.buttonAdd);
-        textBranchCode = findViewById(R.id.textBranchCode);
-        textBranchName = findViewById(R.id.textBranchName);
+        // Initialize UI elements
+        editTextBranchCode = findViewById(R.id.editTextBranchCode);
+        editTextBranchName = findViewById(R.id.editTextBranchName);
+        buttonAddBranch = findViewById(R.id.buttonAddBranch);
+        buttonBack=findViewById(R.id.buttonBack);
 
-        // Initialize the DBHelper object
-        dbHelper = new DBHelper(this);
+        // Initialize DBHelper
+        dbHelper = new DBHelperBranch(this);
 
-        addBranch.setOnClickListener(new View.OnClickListener() {
+        // Set click listener for the button
+        buttonAddBranch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 addBranch();
+
+            }
+        });
+
+        buttonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(AddBranchActivity.this,MainActivity.class);
+                startActivity(intent);
             }
         });
     }
 
+    // Method to add branch
     private void addBranch() {
-        if (isValidInput()) {
-            // Get user input
-            String branchCode = textBranchCode.getText().toString().trim();
-            String branchName = textBranchName.getText().toString().trim();
+        // Retrieve branch details from EditText fields
+        String branchCode = editTextBranchCode.getText().toString().trim();
+        String branchName = editTextBranchName.getText().toString().trim();
 
-            // Insert branch details into the database
-            dbHelper.insertBranchDetails(branchCode, branchName);
-
-            // Display success message
-            Toast.makeText(getApplicationContext(), "Branch Added Successfully", Toast.LENGTH_SHORT).show();
+        // Check if branch details are empty
+        if (branchCode.isEmpty() || branchName.isEmpty()) {
+            // Show toast message if any field is empty
+            showToast("Please enter branch details");
         } else {
-            // Display error message if input is not valid
-            Toast.makeText(getApplicationContext(), "Please fill out all fields correctly", Toast.LENGTH_SHORT).show();
+            // Call DBHelper to add branch
+            dbHelper.addBranch(branchCode, branchName);
+
+            showToast("Branch added successfully");
+            // Clear EditText fields after successful addition
+            clearFields();
         }
+
     }
 
-    private boolean isValidInput() {
-        // Get user input
-        String branchCode = textBranchCode.getText().toString().trim();
-        String branchName = textBranchName.getText().toString().trim();
-
-        // Check if branch code and branch name are not empty
-        return !TextUtils.isEmpty(branchCode) && !TextUtils.isEmpty(branchName);
+    // Method to display toast message
+    private void showToast(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
+    // Method to clear EditText fields
+    private void clearFields() {
+        editTextBranchCode.setText("");
+        editTextBranchName.setText("");
+    }
 }

@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".StudentRegistrationDetails">
+    tools:context=".StudentRegistrationDetails"
+    android:background="@drawable/backgound2">
 
     <TextView
         android:id="@+id/profileName"
@@ -15,12 +16,14 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:text="Your Name"
+        android:textColor="#FFFFFF"
         android:textSize="16sp"
         android:textStyle="bold" />
 
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF" />
 
 </LinearLayout>
