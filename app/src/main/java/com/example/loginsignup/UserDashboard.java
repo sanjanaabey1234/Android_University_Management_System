@@ -11,7 +11,7 @@ import androidx.cardview.widget.CardView;
 public class UserDashboard extends AppCompatActivity {
 
     Button EditButton;
-    CardView courseCard, locationMap, studentView;
+    CardView courseCard, locationMap, studentView, aboutUsCard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,7 @@ public class UserDashboard extends AppCompatActivity {
         courseCard = findViewById(R.id.courseCard);
         locationMap = findViewById(R.id.locationMap);
         studentView = findViewById(R.id.studentView);
+        aboutUsCard = findViewById(R.id.aboutUsCard);
 
         // Setting onClickListener for EditButton
         EditButton.setOnClickListener(new View.OnClickListener() {
@@ -56,6 +57,20 @@ public class UserDashboard extends AppCompatActivity {
                 openBranchCourseList();
             }
         });
+
+        aboutUsCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openStudentRegistration();
+            }
+        });
+
+        locationMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openMap();
+            }
+        });
     }
 
     // Method to display courses
@@ -67,6 +82,16 @@ public class UserDashboard extends AppCompatActivity {
     // Method to open BranchCourseList activity
     public void openBranchCourseList() {
         Intent intent = new Intent(UserDashboard.this, BranchCourseList.class);
+        startActivity(intent);
+    }
+
+    public void openStudentRegistration() {
+        Intent intent = new Intent(UserDashboard.this, StudentRegistrationDetails.class);
+        startActivity(intent);
+    }
+
+    public void openMap() {
+        Intent intent = new Intent(UserDashboard.this, BranchMapLocation.class);
         startActivity(intent);
     }
 }

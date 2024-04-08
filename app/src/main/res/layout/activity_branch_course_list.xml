@@ -48,45 +48,48 @@
 
     <Button
         android:id="@+id/loginButton"
-        android:layout_width="102dp"
-        android:layout_height="46dp"
+        android:layout_width="138dp"
+        android:layout_height="26dp"
+        android:backgroundTint="#FFFFFF"
         android:text="Next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintHorizontal_bias="0.091"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.909" />
+        app:layout_constraintVertical_bias="0.878" />
 
     <Button
         android:id="@+id/course"
-        android:layout_width="102dp"
-        android:layout_height="46dp"
-        android:text="course"
+        android:layout_width="171dp"
+        android:layout_height="63dp"
+        android:text="Are U Register course"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.991" />
+        app:layout_constraintVertical_bias="0.976" />
 
     <Button
         android:id="@+id/Aregister"
-        android:layout_width="173dp"
-        android:layout_height="69dp"
+        android:layout_width="165dp"
+        android:layout_height="28dp"
+        android:backgroundTint="#FFFFFF"
         android:text="Are You Register Course"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.936"
+        app:layout_constraintHorizontal_bias="0.934"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.941"
-        />
+        app:layout_constraintVertical_bias="0.881" />
 
     <Spinner
         android:id="@+id/spinnercourse"
         android:layout_width="204dp"
         android:layout_height="52dp"
+
+        android:background="#D3FDFDFD"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.07"

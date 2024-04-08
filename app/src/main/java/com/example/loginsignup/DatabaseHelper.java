@@ -2,31 +2,32 @@ package com.example.loginsignup;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "courseRegistrationDATABASE";
-    private static final String TABLE_NAME = "courseRegistration";
+    static final String TABLE_NAME = "courseRegistration";
     private static final String COL_ID = "ID";
-    private static final String COL_COURSE_NAME = "courseName";
-    private static final String COL_FEE = "fee";
-    private static final String COL_BRANCH = "branch";
-    private static final String COL_STARTING_DATE = "startingDate";
-    private static final String COL_DURATION = "duration";
-    private static final String COL_CVV = "cvv";
-    private static final String COL_EXPIRE_DATE = "expireDate";
-    private static final String COL_CARD_NO = "cardNo";
+    static final String COL_COURSE_NAME = "courseName";
+    static final String COL_FEE = "fee";
+    static final String COL_BRANCH = "branch";
+    static final String COL_STARTING_DATE = "startingDate";
+    static final String COL_DURATION = "duration";
+    static final String COL_CVV = "cvv";
+    static final String COL_EXPIRE_DATE = "expireDate";
+    static final String COL_CARD_NO = "cardNo";
 
-    private static final String COL_FULL_NAME = "fullName";
-    private static final String COL_EMAIL = "email";
-    private static final String COL_PHONE = "phone";
-    private static final String COL_ADDRESS = "address";
-    private static final String COL_CITY = "city";
-    private static final String COL_DOB = "dob";
-    private static final String COL_NIC = "nic";
-    private static final String COL_GENDER = "gender";
+    static final String COL_FULL_NAME = "fullName";
+    static final String COL_EMAIL = "email";
+    static final String COL_PHONE = "phone";
+    static final String COL_ADDRESS = "address";
+    static final String COL_CITY = "city";
+    static final String COL_DOB = "dob";
+    static final String COL_NIC = "nic";
+    static final String COL_GENDER = "gender";
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, 1);
@@ -43,6 +44,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 COL_DURATION + " TEXT, " +
                 COL_CVV + " TEXT, " +
                 COL_EXPIRE_DATE + " TEXT, " +
+                COL_CARD_NO + " TEXT, " +
                 COL_FULL_NAME + " TEXT, " +
                 COL_EMAIL + " TEXT, " +
                 COL_PHONE + " TEXT, " +
@@ -50,8 +52,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 COL_CITY + " TEXT, " +
                 COL_DOB + " TEXT, " +
                 COL_NIC + " TEXT, " +
-                COL_GENDER + " TEXT, " +
-                COL_CARD_NO + " TEXT)";
+                COL_GENDER + " TEXT)";
 
         db.execSQL(createTableQuery);
     }
@@ -83,11 +84,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(COL_NIC, nic);
         values.put(COL_GENDER, gender);
 
-
-
-
         long result = db.insert(TABLE_NAME, null, values);
         db.close();
         return result;
+    }
+
+    public Cursor getAllRegistrations() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        return db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
     }
 }

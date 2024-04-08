@@ -206,15 +206,15 @@ android:background="@drawable/backgound2">
 
                 <TextView
                     android:id="@+id/beautyName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="169dp"
+                    android:layout_height="53dp"
                     android:layout_below="@+id/beautyImage"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="10dp"
-
-                    android:text="About us"
+                    android:layout_marginTop="-3dp"
+                    android:text="course registration details"
                     android:textColor="@color/lavender"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:gravity="center"/>
 
                 <ImageView
                     android:id="@+id/beautyImage"
@@ -222,7 +222,7 @@ android:background="@drawable/backgound2">
                     android:layout_height="70dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
-                    android:src="@drawable/aboutus" />
+                    android:src="@drawable/studentregistration" />
 
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
